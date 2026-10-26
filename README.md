@@ -115,7 +115,10 @@ Pick the document from the sidebar in Document mode. Answers cite passages by
 number, and the citation panel shows the printed page and the full breadcrumb
 (`Chapter 3 - A Rising Challenge... > Box 3.1: The costs of hidden debt`).
 
-Write-ups of the work each one needed:
+Start with **[HOW-IT-WORKS.md](HOW-IT-WORKS.md)** -- the plain-language
+walkthrough of all three tasks, with a worked example for each.
+
+Engineering write-ups of the work each one needed:
 
 - [RAG.md](RAG.md) - the baseline pipeline
 - [RAG-LONG-DOCUMENTS.md](RAG-LONG-DOCUMENTS.md) - columns, hierarchy, the relevance floor
