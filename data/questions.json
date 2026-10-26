@@ -1,4 +1,7 @@
 [
+  {"question": "How many depository libraries did GPO staff visit in FY 2018?", "expect": ["166"], "probe": "sample"},
+  {"question": "What new digital system replaced FDsys, and when was it fully deployed?", "expect": ["govinfo", "December 2018"], "probe": "sample"},
+  {"question": "How much did GPO procure in printing and information products in FY 2018 on behalf of federal agencies?", "expect": ["375.7"], "probe": "sample"},
   {"question": "What was GPO's total revenue in fiscal year 2018?", "expect": ["874"]},
   {"question": "What was GPO's net income in FY 2018?", "expect": ["52.6"]},
   {"question": "How many staff did GPO employ as of September 30, 2018?", "expect": ["1,737"]},

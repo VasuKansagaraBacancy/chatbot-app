@@ -29,7 +29,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 
-from .layout import Line, PageLayout, extract_page
+from .layout import Line, PageLayout, calibrate_labels, extract_page
 from .textfix import build_vocabulary, rejoin_split_words, repair
 
 # --- role thresholds, calibrated per document ------------------------------
@@ -372,6 +372,10 @@ def read_elements(path: str | Path) -> List[Element]:
     reader = PdfReader(str(path))
 
     pages = [extract_page(page, i) for i, page in enumerate(reader.pages, 1)]
+    # Printed page numbers are only trusted when they agree with each other;
+    # see calibrate_labels. Without this a header that merely contains a
+    # number is cited as the page to go and look at.
+    calibrate_labels(pages)
     parts = _chapter_map(reader, pages)
     style = profile_style(pages)
 

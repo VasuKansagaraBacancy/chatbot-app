@@ -146,13 +146,13 @@ Two container rules were needed:
 * **Paragraphs are rebuilt from typeset lines** before packing, since each
   element is one line of a justified column.
 
-588 chunks, median 288 tokens, none over the embedder's limit.
+596 chunks, median 282 tokens, none over the embedder's limit.
 
 ## Retrieval
 
 | Change | Why |
 |---|---|
-| `FETCH_K` 12 → 30 | At 588 chunks a 12-candidate pool fills with near-duplicates from one section before a better passage elsewhere is reached. |
+| `FETCH_K` 12 → 30 | At 596 chunks a 12-candidate pool fills with near-duplicates from one section before a better passage elsewhere is reached. |
 | Structure boost (+0.30) | Readers navigate a long report by name: "what does table 1.1 show for China?". Matching the recovered `container` metadata is far more reliable than hoping the embedding picked the right one of forty forecast tables. |
 | Chapter boost (+0.15) | Same, for "what does chapter 3 conclude about...". |
 | Reference penalty (−0.35) | A bibliography answers almost nothing but matches strongly on any question sharing an author's subject matter. Kept in the index so "which studies does chapter 3 cite?" still works, and pushed down otherwise. |

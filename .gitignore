@@ -6,12 +6,15 @@ __pycache__/
 # Local model weights live outside the project (see config.py: D:\llm-models)
 *.gguf
 
-# Evaluation output and scratch logs
+# Evaluation output and scratch logs (regenerate with rag.evaluate)
 eval_*.json
 eval_results.json
+tests/fixture_results.json
+tests/followup_results.json
 *.log
 
 # Editor / OS
+*.code-workspace
 .vscode/
 .idea/
 Thumbs.db

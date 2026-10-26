@@ -30,7 +30,7 @@ The model loads at startup (~5–10 s), so the first message isn't slowed by it.
 | Disk | ~2.5 GB, stored at `D:\llm-models\` |
 | RAM at runtime | ~3 GB |
 | Context window | 4096 tokens |
-| Observed speed | ~6.4 tok/s measured (i5-10210U, 4 cores), first token in ~0.5 s |
+| Observed speed | 6.0 tok/s generating, 21 tok/s reading the prompt (i5-10210U, 4 cores) |
 
 **Why this model.** The machine has 24 GB of RAM but a 2 GB MX230, too small to be
 worth offloading layers to, so inference is CPU-only and the model has to be small
@@ -40,7 +40,7 @@ This started on Qwen2.5-3B, which had a real recall problem: asked "What is RAG?
 it invented a different expansion every time ("Reusable", "Relevance-Augmented",
 "Reformer-Augmenter-Guided") instead of *Retrieval-Augmented Generation*, and
 lowering the temperature did not help. Qwen3-4B-Instruct-2507 answers it correctly
-every time and, measured on this CPU, runs at the same ~6.4 tok/s despite being
+every time and, measured on this CPU, runs at the same ~6.0 tok/s despite being
 larger — so the upgrade cost nothing in speed.
 
 **Switching models.** Any GGUF chat model works — point `MODEL_PATH` at it:

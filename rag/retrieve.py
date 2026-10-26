@@ -75,12 +75,22 @@ _FOLLOW_UP = re.compile(
 )
 
 
+_TRAILING_REFERENCE = re.compile(
+    r"\b(that|this|it|those|these|them|the same)\s*\??$", re.I)
+
+
 def needs_rewrite(question: str, history: List[Dict[str, str]]) -> bool:
     """Cheap test for whether a question stands alone."""
     if not history:
         return False
     q = question.strip()
     if len(q.split()) <= 4:          # "and the second?" / "why?"
+        return True
+    # A question that *ends* on a bare demonstrative is leaning on the last
+    # turn as surely as one that opens with a pronoun: "tell me more about
+    # that", "what did you mean by this". The opening pattern alone misses
+    # them, and embedded literally they retrieve nothing.
+    if _TRAILING_REFERENCE.search(q):
         return True
     return bool(_FOLLOW_UP.search(q))
 

@@ -1,4 +1,7 @@
 [
+  {"question": "How much less energy does iMac use compared to the ENERGY STAR requirement?", "expect": ["58"], "probe": "sample"},
+  {"question": "What is the total carbon footprint of the iMac, and how much of that comes from product use versus manufacturing?", "expect": ["346", "45", "50"], "probe": "sample"},
+  {"question": "What material is the iMac stand made from, and what percentage of it is recycled?", "expect": ["aluminum", "100"], "probe": "sample"},
   {"question": "What is the total product carbon footprint of the iMac with two ports and 256GB?", "expect": ["346"], "probe": "table"},
   {"question": "What is the carbon footprint of the iMac (four ports) with 512GB storage?", "expect": ["391"], "probe": "table"},
   {"question": "How is the iMac's carbon footprint split across production, transportation and product use?", "expect": ["50", "5", "45"], "probe": "table"},
@@ -11,7 +14,6 @@
   {"question": "What is the measured power adapter efficiency at 115V?", "expect": ["91.5"], "probe": "table"},
   {"question": "What is the power adapter's no-load consumption at 230V?", "expect": ["0.12"], "probe": "table"},
   {"question": "Which power adapter is the iMac tested with?", "expect": ["143"], "probe": "footnote"},
-
   {"question": "How does Apple define product recycled or renewable content?", "expect": ["mass", "packaging"], "probe": "footnote"},
   {"question": "Under which standards did the iMac achieve its EPEAT Gold rating?", "expect": ["1680.1", "110"], "probe": "footnote"},
   {"question": "Which countries are exempt from Apple's PVC and phthalate-free claim for AC power cords?", "expect": ["India", "Thailand"], "probe": "footnote"},
@@ -22,7 +24,6 @@
   {"question": "How is cobalt in the battery accounted for?", "expect": ["mass balance"], "probe": "footnote"},
   {"question": "How old must you be to use Apple Trade In?", "expect": ["18"], "probe": "footnote"},
   {"question": "What product lifetime does Apple assume for macOS devices when modelling power use?", "expect": ["four"], "probe": "footnote"},
-
   {"question": "When was this iMac introduced?", "expect": ["October 28, 2024"], "probe": "text"},
   {"question": "How much recycled content does the iMac contain?", "expect": ["15"], "probe": "text"},
   {"question": "How much less energy does the iMac use than the ENERGY STAR requirement?", "expect": ["58"], "probe": "text"},
@@ -32,7 +33,6 @@
   {"question": "What share of the iMac by mass has Apple identified the makeup of?", "expect": ["80"], "probe": "text"},
   {"question": "Which LCA standards does Apple follow to calculate greenhouse gas emissions?", "expect": ["14040", "14067"], "probe": "text"},
   {"question": "How does Apple define bio-based plastics?", "expect": ["fossil"], "probe": "text"},
-
   {"question": "What is the capital of France?", "expect": [], "probe": "abstain"},
   {"question": "How much does the iMac cost in Australia?", "expect": [], "probe": "abstain"},
   {"question": "What processor does the iMac use?", "expect": [], "probe": "abstain"}

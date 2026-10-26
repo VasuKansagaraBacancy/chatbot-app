@@ -22,6 +22,7 @@ pages share an identical header string.
 from __future__ import annotations
 
 import re
+from collections import Counter
 from dataclasses import dataclass, field
 from typing import List, Optional, Tuple
 
@@ -383,6 +384,46 @@ def _parse_running_head(text: str) -> Tuple[Optional[str], Optional[str]]:
     digits = re.findall(r"\d{1,3}", bare)
     label = digits[0] if digits else None
     return label, section
+
+
+# A printed page number has to be at least this common among the labels found
+# before the document is believed to be numbered at all, and a label that does
+# not sit at the agreed offset is a false positive.
+_LABEL_AGREEMENT = 0.5
+_LABEL_MINIMUM = 3
+
+
+def calibrate_labels(pages: List["PageLayout"]) -> None:
+    """Discard printed page labels that do not form a consistent sequence.
+
+    `_parse_running_head` takes the digits left over after the boilerplate is
+    stripped, which is right for a report whose running head is its title and
+    its page number -- and wrong for one whose header band holds ordinary
+    text. The GPO annual report produced "p.732" for PDF page 3 and "p.201"
+    for page 5, and those numbers were shown to the reader as the page to go
+    and check.
+
+    A real printed number tracks the PDF page at a constant offset: the GEP
+    report's front matter is 22 pages long, so printed 89 is PDF 111, on every
+    page of the body. That offset is the test. Labels agreeing with the
+    document's modal offset are kept, the rest are dropped, and a document
+    where no offset commands a majority is treated as unnumbered -- its
+    citations fall back to the PDF page, which is at least true.
+    """
+    numbered = [p for p in pages if p.label and p.label.isdigit()]
+    if not numbered:
+        return
+
+    offsets = Counter(int(p.label) - p.number for p in numbered)
+    offset, agreed = offsets.most_common(1)[0]
+    if agreed < _LABEL_MINIMUM or agreed < _LABEL_AGREEMENT * len(numbered):
+        for page in numbered:
+            page.label = None
+        return
+
+    for page in numbered:
+        if int(page.label) - page.number != offset:
+            page.label = None
 
 
 def extract_page(page, number: int) -> PageLayout:

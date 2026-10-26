@@ -1,35 +1,30 @@
 [
+  {"question": "What is the growth outlook for South Asia in this report?", "expect": ["6.3"], "probe": "sample"},
+  {"question": "What does Chapter 3 say about sovereign debt in developing economies?", "expect": ["interest rates"], "probe": "sample"},
+  {"question": "According to the executive summary, what are the main risks to the global outlook?", "expect": ["downside"], "probe": "sample"},
   {"question": "What is global growth projected to be in 2026?", "expect": ["2.5"], "probe": "headline"},
   {"question": "If energy supply disruptions prove more severe than assumed, how far could global growth fall in 2026 and what would inflation be?", "expect": ["1.3", "4.4"], "probe": "headline"},
-
   {"question": "What Brent crude oil price does the report assume for 2026?", "expect": ["94"], "probe": "chapter-1"},
   {"question": "By how much are commodity prices expected to rise in 2026?", "expect": ["22"], "probe": "chapter-1"},
   {"question": "How much are European natural gas prices expected to rise in 2026?", "expect": ["30"], "probe": "chapter-1"},
   {"question": "What does the baseline assume about shipping through the Strait of Hormuz?", "expect": ["July"], "probe": "chapter-1"},
-
   {"question": "According to Table 1.1, what is China's projected GDP growth in 2026?", "expect": ["4.2"], "probe": "table"},
   {"question": "What growth does Table 1.1 project for the United States in 2026?", "expect": ["2.2"], "probe": "table"},
   {"question": "What is projected growth for South Asia in 2026?", "expect": ["6.3"], "probe": "table"},
   {"question": "What growth is projected for advanced economies in 2026?", "expect": ["1.5"], "probe": "table"},
   {"question": "What is the euro area's projected growth in 2026?", "expect": ["0.8"], "probe": "table"},
-
   {"question": "What is Box 1.1 about?", "expect": ["AI"], "probe": "box"},
   {"question": "Which box discusses unlocking private investment?", "expect": ["1.2"], "probe": "box"},
   {"question": "What does Box 3.1 examine?", "expect": ["hidden debt"], "probe": "box"},
-
   {"question": "What is growth in Latin America and the Caribbean projected to be in 2026?", "expect": ["2.2"], "probe": "chapter-2"},
   {"question": "Why was the growth forecast lowered for Senegal?", "expect": ["hidden debt"], "probe": "chapter-2"},
   {"question": "What is the outlook for Sub-Saharan Africa?", "expect": [], "probe": "chapter-2"},
-
   {"question": "What share of EMDE public debt is issued in foreign currencies?", "expect": ["40"], "probe": "chapter-3"},
   {"question": "In which economies does the sensitivity of interest rates to debt levels rise most?", "expect": ["default"], "probe": "chapter-3"},
-
   {"question": "How has the share of commodity exporters in or at high risk of debt distress changed since 2015?", "expect": ["20", "49"], "probe": "chapter-4"},
   {"question": "What share of commodity importers were in or at high risk of debt distress in 2026?", "expect": ["45"], "probe": "chapter-4"},
-
   {"question": "Which chapter covers sovereign debt levels and interest rates in EMDEs?", "expect": ["3"], "probe": "navigation"},
   {"question": "What is the title of Chapter 4?", "expect": ["Commodity Price Swings"], "probe": "navigation"},
-
   {"question": "What was GPO's total revenue in fiscal year 2018?", "probe": "abstain"},
   {"question": "What is the World Bank's policy on staff working remotely from overseas?", "probe": "abstain"},
   {"question": "Who won the 2022 football World Cup?", "probe": "abstain"}
