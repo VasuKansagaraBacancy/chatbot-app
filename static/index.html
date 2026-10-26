@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Corpus — document intelligence</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%238B7CFF'/><stop offset='1' stop-color='%2345D8E8'/></linearGradient></defs><rect width='32' height='32' rx='9' fill='url(%23g)'/><path d='M16 7 26 12 16 17 6 12z' fill='%230B0D12' opacity='.85'/><path d='M6 19l10 5 10-5' stroke='%230B0D12' stroke-width='2.4' fill='none' stroke-linejoin='round' opacity='.85'/></svg>" />
+<link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar">
+
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="30" height="30">
+            <defs>
+              <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#8B7CFF"/>
+                <stop offset="1" stop-color="#45D8E8"/>
+              </linearGradient>
+            </defs>
+            <rect width="32" height="32" rx="9" fill="url(#bg)"/>
+            <path d="M16 7 26 12 16 17 6 12z" fill="#0B0D12" opacity=".85"/>
+            <path d="M6 19l10 5 10-5" stroke="#0B0D12" stroke-width="2.4"
+                  fill="none" stroke-linejoin="round" opacity=".85"/>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-name">Corpus</span>
+          <span class="brand-sub">document intelligence</span>
+        </span>
+      </div>
+
+      <button class="new-chat" id="newChat">
+        <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true">
+          <path d="M12 5v14M5 12h14" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        New chat
+      </button>
+
+      <div class="rail-group">
+        <div class="rail-label">Mode</div>
+        <div class="mode-switch" id="modeSwitch">
+          <button class="mode-btn active" data-mode="chat">
+            <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
+              <path d="M21 12a8 8 0 0 1-8 8H4l2-3a8 8 0 1 1 15-5z" fill="none"
+                    stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+            </svg>
+            Chat
+          </button>
+          <button class="mode-btn" data-mode="document" id="docModeBtn">
+            <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
+              <path d="M7 3h7l5 5v13H7z M14 3v5h5" fill="none" stroke="currentColor"
+                    stroke-width="1.8" stroke-linejoin="round"/>
+            </svg>
+            Document
+          </button>
+        </div>
+      </div>
+
+      <div class="doc-picker" id="docPicker">
+        <div class="source-choice" id="sourceChoice" hidden>
+          <label class="rail-label" for="corpusSelect">Source</label>
+          <div class="select-shell">
+            <select id="corpusSelect"></select>
+            <svg class="select-caret" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
+              <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+        <div class="mode-note" id="modeNote"></div>
+      </div>
+
+      <div class="rail-group rail-grow">
+        <div class="rail-label">Conversations</div>
+        <div class="session-list" id="sessionList"></div>
+      </div>
+
+      <div class="sidebar-foot">
+        <span class="dot" id="statusDot"></span>
+        <span id="statusText">connecting…</span>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="icon-btn" id="toggleSidebar" title="Toggle sidebar" aria-label="Toggle sidebar">
+          <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true">
+            <path d="M4 6h16M4 12h16M4 18h16" fill="none" stroke="currentColor"
+                  stroke-width="1.9" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <div class="title" id="chatTitle">New chat</div>
+        <span class="mode-pill" aria-hidden="true"></span>
+      </header>
+
+      <div class="messages" id="messages">
+        <div class="empty" id="empty">
+          <h1>What can I help with?</h1>
+          <p>Ask anything. I remember this conversation, so follow-up questions work.</p>
+          <div class="suggestions">
+            <button class="suggestion">What is retrieval-augmented generation?</button>
+            <button class="suggestion">Explain async/await in Python</button>
+            <button class="suggestion">Write a haiku about winter</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="composer-wrap">
+        <form class="composer" id="composer">
+          <textarea id="input" rows="1" placeholder="Message the assistant…" autocomplete="off"></textarea>
+          <button type="submit" id="send" title="Send" aria-label="Send">
+            <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true">
+              <path d="M12 19V5M12 5l-6 6M12 5l6 6" fill="none" stroke="currentColor"
+                    stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </form>
+        <p class="hint">
+          <span><kbd>Enter</kbd> send</span>
+          <span><kbd>Shift</kbd>+<kbd>Enter</kbd> newline</span>
+          <span>History is per conversation</span>
+        </p>
+      </div>
+    </main>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+[
+  {
+    "question": "What was total revenue in fiscal year 2024?",
+    "standalone": "What was total revenue in fiscal year 2024?",
+    "answer": "Total revenue in fiscal year 2024 was 1,284.6 million dollars [1].",
+    "cited": true,
+    "abstained": false,
+    "top_score": 1.0,
+    "pages": [
+      1
+    ],
+    "sources": [
+      "sample_annual_report.pdf, p.1 — FINANCIAL HIGHLIGHTS"
+    ],
+    "retrieval_ms": 111,
+    "generation_s": 29.5,
+    "expect": [
+      "1,284.6"
+    ],
+    "expect_missing": [],
+    "expect_pass": true
+  },
+  {
+    "question": "How does that compare to the previous year?",
+    "standalone": "How does that compare to the previous year?",
+    "answer": "Total revenue in fiscal year 2024 was 1,284.6 million dollars, an increase of 6.2 per cent over the 1,209.3 million dollars recorded in fiscal year 2023 [3]. This indicates that revenue grew compared to the previous year.",
+    "cited": true,
+    "abstained": false,
+    "top_score": 0.7577,
+    "pages": [
+      1,
+      2
+    ],
+    "sources": [
+      "sample_annual_report.pdf, p.1 — LETTER FROM THE DIRECTOR",
+      "sample_annual_report.pdf, p.1 — WORKFORCE",
+      "sample_annual_report.pdf, p.1 — FINANCIAL HIGHLIGHTS",
+      "sample_annual_report.pdf, p.2 — FEDERAL DEPOSITORY LIBRARY PROGRAMME",
+      "sample_annual_report.pdf, p.2 — DIGITAL PRESERVATION PROGRAMME"
+    ],
+    "retrieval_ms": 19,
+    "generation_s": 72.3,
+    "expect": [
+      "1,209.3"
+    ],
+    "expect_missing": [],
+    "expect_pass": true
+  },
+  {
+    "question": "And what about the headcount?",
+    "standalone": "And what about the headcount?",
+    "answer": "Headcount at 30 September 2024 stood at 1,742 full-time equivalent employees, down from 1,803 a year earlier [1]. This represents a reduction of 61 employees. The decrease was achieved entirely through attrition and voluntary separations, with no involuntary separations during the year [1].",
+    "cited": true,
+    "abstained": false,
+    "top_score": 1.0,
+    "pages": [
+      1,
+      2
+    ],
+    "sources": [
+      "sample_annual_report.pdf, p.1 — WORKFORCE",
+      "sample_annual_report.pdf, p.1 — FINANCIAL HIGHLIGHTS",
+      "sample_annual_report.pdf, p.2 — SUSTAINABILITY"
+    ],
+    "retrieval_ms": 18,
+    "generation_s": 63.7,
+    "expect": [
+      "1,742"
+    ],
+    "expect_missing": [],
+    "expect_pass": true
+  },
+  {
+    "question": "Why did it fall?",
+    "standalone": "Why did the headcount fall from 1,803 employees in fiscal year 2023 to 1,742 full-time equivalent employees in fiscal year 2024?",
+    "answer": "The headcount fell from 1,803 employees in fiscal year 2023 to 1,742 full-time equivalent employees in fiscal year 2024 because the reduction was achieved entirely through attrition and voluntary separations, with no involuntary separations during the year [1].",
+    "cited": true,
+    "abstained": false,
+    "top_score": 1.0,
+    "pages": [
+      1,
+      2
+    ],
+    "sources": [
+      "sample_annual_report.pdf, p.1 — WORKFORCE",
+      "sample_annual_report.pdf, p.1 — FINANCIAL HIGHLIGHTS",
+      "sample_annual_report.pdf, p.2 — SUSTAINABILITY",
+      "sample_annual_report.pdf, p.2 — FEDERAL DEPOSITORY LIBRARY PROGRAMME"
+    ],
+    "retrieval_ms": 45,
+    "generation_s": 99.1,
+    "expect": [
+      "attrition"
+    ],
+    "expect_missing": [],
+    "expect_pass": true
+  }
+]

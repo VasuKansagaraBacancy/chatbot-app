@@ -1,0 +1,15 @@
+[
+  {"question": "What was total revenue in fiscal year 2024?",
+   "expect": ["1,284.6"]},
+  {"question": "How many full-time equivalent employees were there at the end of the year?",
+   "expect": ["1,742"]},
+  {"question": "How much content does the preservation repository hold?",
+   "expect": ["3.9"]},
+  {"question": "How many libraries participated in the depository programme?",
+   "expect": ["1,086"]},
+  {"question": "What standard did the repository achieve certification against?",
+   "expect": ["16363"]},
+  {"question": "Were there any involuntary separations during the year?",
+   "expect": ["no"]},
+  {"question": "What is the Office's policy on cryptocurrency investments?"}
+]

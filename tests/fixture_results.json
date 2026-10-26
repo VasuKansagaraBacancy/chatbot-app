@@ -1,0 +1,160 @@
+[
+  {
+    "question": "What was total revenue in fiscal year 2024?",
+    "standalone": "What was total revenue in fiscal year 2024?",
+    "answer": "Total revenue in fiscal year 2024 was 1,284.6 million dollars [1].",
+    "cited": true,
+    "abstained": false,
+    "top_score": 1.0,
+    "pages": [
+      1
+    ],
+    "sources": [
+      "sample_annual_report.pdf, p.1 — FINANCIAL HIGHLIGHTS"
+    ],
+    "retrieval_ms": 131,
+    "generation_s": 32.2,
+    "expect": [
+      "1,284.6"
+    ],
+    "expect_missing": [],
+    "expect_pass": true
+  },
+  {
+    "question": "How many full-time equivalent employees were there at the end of the year?",
+    "standalone": "How many full-time equivalent employees were there at the end of the year?",
+    "answer": "There were 1,742 full-time equivalent employees at the end of the year. This is stated in passage [1]: \"Headcount at 30 September 2024 stood at 1,742 full-time equivalent employees.\"",
+    "cited": true,
+    "abstained": false,
+    "top_score": 1.0,
+    "pages": [
+      1,
+      2
+    ],
+    "sources": [
+      "sample_annual_report.pdf, p.1 — WORKFORCE",
+      "sample_annual_report.pdf, p.2 — FEDERAL DEPOSITORY LIBRARY PROGRAMME"
+    ],
+    "retrieval_ms": 24,
+    "generation_s": 30.4,
+    "expect": [
+      "1,742"
+    ],
+    "expect_missing": [],
+    "expect_pass": true
+  },
+  {
+    "question": "How much content does the preservation repository hold?",
+    "standalone": "How much content does the preservation repository hold?",
+    "answer": "The preservation repository holds 3.9 petabytes of content [1].",
+    "cited": true,
+    "abstained": false,
+    "top_score": 1.0,
+    "pages": [
+      1,
+      2
+    ],
+    "sources": [
+      "sample_annual_report.pdf, p.2 — DIGITAL PRESERVATION PROGRAMME",
+      "sample_annual_report.pdf, p.1 — FINANCIAL HIGHLIGHTS",
+      "sample_annual_report.pdf, p.2 — FEDERAL DEPOSITORY LIBRARY PROGRAMME",
+      "sample_annual_report.pdf, p.2 — SUSTAINABILITY"
+    ],
+    "retrieval_ms": 16,
+    "generation_s": 53.3,
+    "expect": [
+      "3.9"
+    ],
+    "expect_missing": [],
+    "expect_pass": true
+  },
+  {
+    "question": "How many libraries participated in the depository programme?",
+    "standalone": "How many libraries participated in the depository programme?",
+    "answer": "1,086 libraries participated in the depository programme. This is stated in passage [1]: \"The depository programme served 1,086 participating libraries at year end...\"",
+    "cited": true,
+    "abstained": false,
+    "top_score": 1.0,
+    "pages": [
+      1,
+      2
+    ],
+    "sources": [
+      "sample_annual_report.pdf, p.2 — FEDERAL DEPOSITORY LIBRARY PROGRAMME",
+      "sample_annual_report.pdf, p.2 — SUSTAINABILITY",
+      "sample_annual_report.pdf, p.1 — WORKFORCE"
+    ],
+    "retrieval_ms": 24,
+    "generation_s": 40.3,
+    "expect": [
+      "1,086"
+    ],
+    "expect_missing": [],
+    "expect_pass": true
+  },
+  {
+    "question": "What standard did the repository achieve certification against?",
+    "standalone": "What standard did the repository achieve certification against?",
+    "answer": "The repository achieved certification against the ISO 16363 trustworthy digital repository standard [1][2].",
+    "cited": true,
+    "abstained": false,
+    "top_score": 1.0,
+    "pages": [
+      2
+    ],
+    "sources": [
+      "sample_annual_report.pdf, p.2 — DIGITAL PRESERVATION PROGRAMME",
+      "sample_annual_report.pdf, p.2 — FEDERAL DEPOSITORY LIBRARY PROGRAMME"
+    ],
+    "retrieval_ms": 20,
+    "generation_s": 24.6,
+    "expect": [
+      "16363"
+    ],
+    "expect_missing": [],
+    "expect_pass": true
+  },
+  {
+    "question": "Were there any involuntary separations during the year?",
+    "standalone": "Were there any involuntary separations during the year?",
+    "answer": "No, there were no involuntary separations during the year. The report states that \"the reduction was achieved entirely through attrition and voluntary separation; there were no involuntary separations during the year\" [1].",
+    "cited": true,
+    "abstained": false,
+    "top_score": 0.956,
+    "pages": [
+      1,
+      2
+    ],
+    "sources": [
+      "sample_annual_report.pdf, p.1 — WORKFORCE",
+      "sample_annual_report.pdf, p.2 — FEDERAL DEPOSITORY LIBRARY PROGRAMME",
+      "sample_annual_report.pdf, p.1 — LETTER FROM THE DIRECTOR"
+    ],
+    "retrieval_ms": 20,
+    "generation_s": 36.2,
+    "expect": [
+      "no"
+    ],
+    "expect_missing": [],
+    "expect_pass": true
+  },
+  {
+    "question": "What is the Office's policy on cryptocurrency investments?",
+    "standalone": "What is the Office's policy on cryptocurrency investments?",
+    "answer": "The report does not appear to cover this. The passages discuss lighting retrofits, digital publishing transitions, financial highlights, internal controls, and capital expenditures but contain no information about cryptocurrency investments.",
+    "cited": false,
+    "abstained": true,
+    "top_score": 0.975,
+    "pages": [
+      1,
+      2
+    ],
+    "sources": [
+      "sample_annual_report.pdf, p.2 — GOVERNANCE AND RISK",
+      "sample_annual_report.pdf, p.1 — LETTER FROM THE DIRECTOR",
+      "sample_annual_report.pdf, p.1 — FINANCIAL HIGHLIGHTS"
+    ],
+    "retrieval_ms": 22,
+    "generation_s": 35.9
+  }
+]

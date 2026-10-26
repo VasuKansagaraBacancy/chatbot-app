@@ -1,0 +1,6 @@
+[
+  {"question": "What was total revenue in fiscal year 2024?", "expect": ["1,284.6"]},
+  {"question": "How does that compare to the previous year?", "expect": ["1,209.3"]},
+  {"question": "And what about the headcount?", "expect": ["1,742"]},
+  {"question": "Why did it fall?", "expect": ["attrition"]}
+]

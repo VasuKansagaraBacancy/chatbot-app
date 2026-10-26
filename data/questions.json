@@ -1,0 +1,22 @@
+[
+  {"question": "What was GPO's total revenue in fiscal year 2018?", "expect": ["874"]},
+  {"question": "What was GPO's net income in FY 2018?", "expect": ["52.6"]},
+  {"question": "How many staff did GPO employ as of September 30, 2018?", "expect": ["1,737"]},
+  {"question": "How many depository libraries participate in the FDLP?", "expect": ["1,133"]},
+  {"question": "Which firm audited GPO's financial statements, and what opinion did they issue?", "expect": ["KPMG", "unmodified"]},
+  {"question": "For how many consecutive years has GPO received a clean audit opinion?", "expect": ["22"]},
+  {"question": "How many passports did GPO produce in FY 2018?", "expect": ["16 million"]},
+  {"question": "How much printing did GPO procure from the private sector in FY 2018?", "expect": ["375"]},
+  {"question": "How many titles were available on govinfo at the end of FY 2018?", "expect": ["2.5 million"]},
+  {"question": "When was GPO created and when did it begin operations?", "expect": ["1860", "1861"]},
+  {"question": "Who signed the transmittal letter as Acting Deputy Director?", "expect": ["Crawford"]},
+  {"question": "Which standard was govinfo audited against for trustworthy digital repository certification?", "expect": ["16363"]},
+  {"question": "What was GPO's total headcount in 1980, and what is it now?", "expect": ["6,450", "1,737"]},
+  {"question": "Which federal agency was GPO's largest customer in FY 2018?", "expect": ["State"]},
+  {"question": "How many FDLP Academy webinars were held and how many people registered?", "expect": ["85", "10,214"]},
+  {"question": "What was GPO's fund balance with Treasury at the end of FY 2018?", "expect": ["644.8"]},
+  {"question": "How many tangible copies were distributed to depository libraries?", "expect": ["802,834"]},
+  {"question": "What is the estimated cost of asbestos remediation at GPO's facility?", "expect": ["685"]},
+  {"question": "What is GPO's policy on employee remote working from overseas?"},
+  {"question": "How much did GPO spend on advertising campaigns in FY 2018?"}
+]
